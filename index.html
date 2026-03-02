@@ -80,6 +80,10 @@
     background: var(--cream);
     color: var(--text-dark);
   }
+  #app.visible {
+    display: -webkit-flex !important;
+    display: flex !important;
+  }
 
   /* Header */
   .app-header {
@@ -1155,9 +1159,22 @@
 
 <script>
   function launchApp() {
-    document.getElementById('intro').style.display = 'none';
-    document.getElementById('enterBtnWrap').style.display = 'none';
-    document.getElementById('app').style.display = 'flex';
+    var intro = document.getElementById('intro');
+    var wrap  = document.getElementById('enterBtnWrap');
+    var app   = document.getElementById('app');
+    
+    // Hide intro
+    intro.style.display = 'none';
+    intro.style.visibility = 'hidden';
+    if (wrap) { wrap.style.display = 'none'; }
+    
+    // Show app - use both class and inline style for iOS Safari
+    app.classList.add('visible');
+    app.style.display = '-webkit-flex';
+    app.style.display = 'flex';
+    
+    // Scroll to top just in case
+    window.scrollTo(0, 0);
   }
 
   window.addEventListener('load', function() {
