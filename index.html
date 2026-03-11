@@ -1206,7 +1206,7 @@
   // Register service worker for offline support
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/spain-app/service-worker.js')
+      navigator.serviceWorker.register('/Jen-and-David-Spain-App/service-worker.js')
         .then(function(reg) {
           console.log('Spain app: service worker registered', reg.scope);
         })

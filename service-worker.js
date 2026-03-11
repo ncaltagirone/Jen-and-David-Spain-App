@@ -5,11 +5,11 @@ const CACHE_NAME = 'spain-app-v1';
 
 // All files to cache for offline use
 const FILES_TO_CACHE = [
-  '/spain-app/',
-  '/spain-app/index.html',
-  '/spain-app/manifest.json',
-  '/spain-app/icon-192.svg',
-  '/spain-app/icon-512.svg'
+  '/Jen-and-David-Spain-App/',
+  '/Jen-and-David-Spain-App/index.html',
+  '/Jen-and-David-Spain-App/manifest.json',
+  '/Jen-and-David-Spain-App/icon-192.svg',
+  '/Jen-and-David-Spain-App/icon-512.svg'
 ];
 
 // Install: cache everything on first load
@@ -58,7 +58,7 @@ self.addEventListener('fetch', function(event) {
         return networkResponse;
       }).catch(function() {
         // If both cache and network fail, return the main page
-        return caches.match('/spain-app/index.html');
+        return caches.match('/Jen-and-David-Spain-App/index.html');
       });
     })
   );

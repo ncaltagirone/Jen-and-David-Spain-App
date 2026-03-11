@@ -2,7 +2,7 @@
   "name": "Jen & David Go To Spain",
   "short_name": "Spain Trip",
   "description": "A travel companion app for Jen and David's Spain trip, April 2026",
-  "start_url": "/spain-app/",
+  "start_url": "/Jen-and-David-Spain-App/",
   "display": "standalone",
   "background_color": "#1A1208",
   "theme_color": "#8B1A1A",
