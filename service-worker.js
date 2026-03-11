@@ -1,7 +1,7 @@
 // Jen & David Go To Spain - Service Worker
 // Caches all app assets on first load for offline use
 
-const CACHE_NAME = 'spain-app-v1';
+const CACHE_NAME = 'spain-app-v2';
 
 // All files to cache for offline use
 const FILES_TO_CACHE = [
@@ -9,7 +9,13 @@ const FILES_TO_CACHE = [
   '/Jen-and-David-Spain-App/index.html',
   '/Jen-and-David-Spain-App/manifest.json',
   '/Jen-and-David-Spain-App/icon-192.svg',
-  '/Jen-and-David-Spain-App/icon-512.svg'
+  '/Jen-and-David-Spain-App/icon-512.svg',
+  '/Jen-and-David-Spain-App/velazquez.jpg',
+  '/Jen-and-David-Spain-App/goya.jpg',
+  '/Jen-and-David-Spain-App/bosch.jpg',
+  '/Jen-and-David-Spain-App/royal-palace.jpg',
+  '/Jen-and-David-Spain-App/alcazar-seville.jpg',
+  '/Jen-and-David-Spain-App/cathedral-seville.jpg'
 ];
 
 // Install: cache everything on first load

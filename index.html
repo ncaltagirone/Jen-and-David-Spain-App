@@ -353,6 +353,76 @@
     font-weight: 600;
   }
 
+  /* Artwork cards - Prado tab */
+  .artwork-card {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .artwork-img {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    display: block;
+    background: #1a1208;
+  }
+  .artwork-img-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #2a1a0a 0%, #1a1208 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #C9A84C;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    gap: 0.4rem;
+  }
+  .artwork-header {
+    padding: 0.7rem 1rem 0.3rem;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+  }
+  .artwork-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    font-style: italic;
+  }
+  .artwork-meta {
+    font-size: 0.78rem;
+    color: var(--terracotta);
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+  }
+  .artwork-body {
+    padding: 0.8rem 1rem;
+  }
+  .artwork-desc {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    line-height: 1.65;
+  }
+
+  /* History images */
+  .history-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top: 3px solid var(--gold);
+  }
+  .history-img-caption {
+    font-size: 0.75rem;
+    color: var(--text-mid);
+    font-style: italic;
+    text-align: center;
+    padding: 0.4rem 1rem;
+    background: white;
+  }
+
   /* Phrase table */
   .phrase-table { width: 100%; border-collapse: collapse; margin-top: 0.4rem; }
   .phrase-table tr { border-bottom: 1px solid rgba(0,0,0,0.07); }
@@ -644,6 +714,7 @@
     <button class="tab-btn" onclick="showTab('culture', this)">Culture</button>
     <button class="tab-btn" onclick="showTab('history', this)">History</button>
     <button class="tab-btn" onclick="showTab('logistics', this)">Logistics</button>
+    <button class="tab-btn" onclick="showTab('prado', this)">Prado</button>
   </div>
 
   <div class="content">
@@ -705,6 +776,8 @@
               <p><strong>Historical context worth knowing:</strong> The Prado opened in 1819 but the collection was built over centuries by Spanish royalty — which means what you're looking at is essentially the personal art collection of some of the most powerful rulers in Western history. Velázquez was the court painter to King Philip IV. Goya painted royalty too, but by the end of his life he was painting nightmares. That arc — from court flattery to <em>Saturn</em> — is one of the most interesting stories in art history, and you can see the whole thing in one building.</p>
               <br>
               <p><strong>Practical:</strong> The Prado is at Paseo del Prado s/n — about a 15-minute walk from your hotel or a short taxi. Opens at 10 AM Tuesday through Sunday, closed Mondays. General admission is €15. Buy tickets online in advance at <strong>museodelprado.es</strong> — the line without a ticket can be long. Two to three hours is enough to see the highlights without your feet giving out on you.</p>
+              <br>
+              <p style="color:var(--terracotta);font-style:italic;">→ See the Prado tab for images and deeper notes on each painting.</p>
             </div>
           </div>
         </div>
@@ -1028,6 +1101,8 @@
             <span class="section-title">The Royal Palace</span>
           </div>
           <div class="section-body">
+            <img src="royal-palace.jpg" alt="Royal Palace of Madrid" class="history-img">
+            <p class="history-img-caption">Royal Palace of Madrid</p>
             <p>Built in the 18th century on the site of a former Moorish castle that burned down (conveniently, some historians note). Philip V wanted something that would make Versailles look modest — he nearly succeeded. It's the largest royal palace in Western Europe by floor area. The Spanish royal family doesn't actually live here anymore; they use a smaller palace outside the city. This one is basically too large and magnificent to actually live in.</p>
           </div>
         </div>
@@ -1048,6 +1123,8 @@
             <span class="section-title">Seville & the Moors</span>
           </div>
           <div class="section-body">
+            <img src="alcazar-seville.jpg" alt="Real Alcázar of Seville" class="history-img">
+            <p class="history-img-caption">The Real Alcázar, Seville — still an active royal residence</p>
             <p>Seville was one of the most important cities in the Moorish empire — the Moors being the Muslim inhabitants of North Africa and the Iberian Peninsula, primarily of Arab and Berber descent — that controlled most of Spain from 711 to 1492 — a period called Al-Andalus. The Moors brought with them advances in mathematics, astronomy, agriculture, and architecture that Europe largely didn't have yet. The Alcázar you'll visit was a Moorish palace before it was a Christian one, and Christian kings liked it so much they kept building onto it in Moorish style even after the Reconquista. That style — Mudéjar — is why Seville looks like nowhere else in Europe.</p>
           </div>
         </div>
@@ -1058,6 +1135,8 @@
             <span class="section-title">Seville & the New World</span>
           </div>
           <div class="section-body">
+            <img src="cathedral-seville.jpg" alt="Seville Cathedral" class="history-img">
+            <p class="history-img-caption">Seville Cathedral — the largest Gothic cathedral in the world</p>
             <p>Columbus sailed from near here in 1492 — the same year the Moors were expelled from Granada, which is not a coincidence. Spain suddenly had a lot of energy to redirect. For the next two centuries, Seville was the only port in Spain legally allowed to trade with the Americas. All the gold and silver and goods from the New World passed through this city. The wealth was staggering. The Cathedral you'll visit was built partly as a statement of that wealth — they wanted to build something so large, the quote goes, that "those who see it finished will think we were mad to have begun it."</p>
           </div>
         </div>
@@ -1174,6 +1253,55 @@
 
       </div>
     </div><!-- /logistics -->
+
+
+    <!-- ── PRADO ── -->
+    <div class="tab-panel" id="tab-prado">
+      <div class="content-tab">
+
+        <div class="content-hero">
+          <h2>The Prado</h2>
+          <p>Three paintings you need to stand in front of. Not read about — stand in front of.</p>
+        </div>
+
+        <!-- Velázquez -->
+        <div class="artwork-card">
+          <img src="velazquez.jpg" alt="Las Meninas by Velázquez" class="artwork-img">
+          <div class="artwork-header">
+            <div class="artwork-title">Las Meninas</div>
+            <div class="artwork-meta">Diego Velázquez · 1656 · Room 12</div>
+          </div>
+          <div class="artwork-body">
+            <p class="artwork-desc">This is the one that will stop you cold. A Spanish princess stands at the center of a large room, surrounded by her ladies-in-waiting, a dog, a dwarf, and various courtiers. Velázquez himself is in the painting, brush in hand, looking out at you. In the background, a mirror reflects what appears to be the king and queen — which means you, standing there looking at the painting, are standing where the king and queen stood. You're in the painting. It's a picture about looking at pictures, and the longer you stand in front of it the stranger and more interesting it gets. Art historians have been arguing about what it means for 350 years. Don't try to resolve it — just let it work on you.</p>
+          </div>
+        </div>
+
+        <!-- Goya -->
+        <div class="artwork-card">
+          <img src="goya.jpg" alt="Saturn Devouring His Son by Goya" class="artwork-img">
+          <div class="artwork-header">
+            <div class="artwork-title">Saturn Devouring His Son</div>
+            <div class="artwork-meta">Francisco Goya · c. 1819–1823 · Goya Rooms</div>
+          </div>
+          <div class="artwork-body">
+            <p class="artwork-desc">Goya painted this directly on the wall of his own house when he was old, deaf, and had watched Napoleon's army tear Spain apart. He wasn't painting it for anyone — it was one of fourteen "Black Paintings" found on his walls after he died. Saturn, the Roman god who feared being overthrown by his children, is eating one of them. The expression on Saturn's face — wide-eyed, frantic, unstoppable — is one of the most unsettling things in Western art. What makes it stranger is that earlier in his career Goya was a celebrated court painter who did charming portraits of royalty. This is the same man, forty years later. That arc is worth knowing when you're standing in front of it.</p>
+          </div>
+        </div>
+
+        <!-- Bosch -->
+        <div class="artwork-card">
+          <img src="bosch.jpg" alt="The Garden of Earthly Delights by Bosch" class="artwork-img">
+          <div class="artwork-header">
+            <div class="artwork-title">The Garden of Earthly Delights</div>
+            <div class="artwork-meta">Hieronymus Bosch · c. 1490–1510 · Flemish Rooms</div>
+          </div>
+          <div class="artwork-body">
+            <p class="artwork-desc">A triptych — three panels hinged together — painted around 1500 by a Flemish artist nobody fully understands. The left panel is the Garden of Eden. The right panel is Hell. The enormous middle panel is everything in between, which turns out to be a fever dream of naked figures, giant fruit, impossible creatures, and scenes that have no obvious explanation. Nobody knows exactly what it means. Scholars have argued it's a moral warning, a utopian fantasy, an alchemical allegory, or something else entirely. Here's the thing — you don't need to know what it means to be completely absorbed by it. Pick any square inch of the middle panel and just look. There's always something you didn't see before. Budget more time here than you think you need.</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /prado -->
 
   </div><!-- /content -->
 </div><!-- /app -->
