@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Spain Trip">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.svg">
 <title>Jen & David Go To Spain</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
@@ -1198,5 +1202,19 @@
   }
 </script>
 
+<script>
+  // Register service worker for offline support
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/spain-app/service-worker.js')
+        .then(function(reg) {
+          console.log('Spain app: service worker registered', reg.scope);
+        })
+        .catch(function(err) {
+          console.log('Spain app: service worker registration failed', err);
+        });
+    });
+  }
+</script>
 </body>
 </html>

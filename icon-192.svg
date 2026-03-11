@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Background circle -->
+  <circle cx="96" cy="96" r="96" fill="#8B1A1A"/>
+  <!-- Subtle inner ring -->
+  <circle cx="96" cy="96" r="82" fill="none" stroke="#C9A84C" stroke-width="2" opacity="0.4"/>
+  <!-- Gold plane icon - pointing upper right -->
+  <g transform="translate(96,96) rotate(-35)">
+    <!-- Main fuselage -->
+    <ellipse cx="0" cy="0" rx="38" ry="10" fill="#C9A84C"/>
+    <!-- Nose -->
+    <ellipse cx="32" cy="0" rx="10" ry="6" fill="#C9A84C"/>
+    <!-- Main wings -->
+    <ellipse cx="2" cy="0" rx="8" ry="32" fill="#C9A84C"/>
+    <!-- Tail wing -->
+    <ellipse cx="-30" cy="0" rx="5" ry="16" fill="#C9A84C"/>
+    <!-- Tail fin -->
+    <ellipse cx="-32" cy="-6" rx="10" ry="4" fill="#C9A84C" transform="rotate(-20,-32,-6)"/>
+  </g>
+  <!-- App name arc at bottom -->
+  <text x="96" y="168" 
+        font-family="Georgia, serif" 
+        font-size="13" 
+        fill="#E8C97A" 
+        text-anchor="middle"
+        letter-spacing="1">SPAIN 2026</text>
+</svg>
